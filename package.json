@@ -12,7 +12,6 @@
   "scripts": {
     "build": "npx babel src --out-dir lib"
   },
-  "author": "youzan-pagedesign",
   "license": "MIT",
   "peerDependencies": {
     "vant": "^2.2.16",
