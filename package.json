@@ -24,15 +24,6 @@
     "@babel/preset-env": "^7.10.1",
     "@babel/runtime": "7.x",
     "@vue/component-compiler-utils": "^3.2.2",
-    "@youzan/captain": "^3.10.11",
-    "@youzan/captain-showcase": "^2.2.53",
-    "@youzan/feature-adaptor": "^1.3.2",
-    "@youzan/safe-link": "^1.0.0",
-    "@youzan/utils": "^3.0.0",
-    "@youzan/utils-shop": "^1.2.0",
-    "@youzan/zan-h5-ajax": "^1.4.1",
-    "@youzan/zan-jsbridge": "^1.0.0",
-    "@youzan/znb": "^1.9.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-es2015": "^6.24.1",
     "core-js": "3.x",
@@ -44,7 +35,6 @@
   },
   "devDependencies": {
     "@vant/cli": "2.2.7",
-    "@youzan/babel-preset-h5": "^1.4.7",
     "vant": "2.10.13",
     "vue": "2.5.22",
     "vue-template-compiler": "2.5.22"

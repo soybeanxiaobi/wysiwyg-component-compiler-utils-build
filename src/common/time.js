@@ -2,7 +2,7 @@ const SECS_PER_DAY = 24 * 3600;
 const SECS_PER_HOUR = 3600;
 const SECS_PER_MINUTE = 60;
 
-function formatTime(time) {
+const formatTime = (time) => {
   return time > 9 ? '' + time : '0' + time;
 }
 
