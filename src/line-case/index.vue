@@ -8,10 +8,6 @@
 export default {
   name: "line-case",
 
-  components: {
-    [White.name]: White,
-  },
-
   props: {
     color: String,
     lineType: String,

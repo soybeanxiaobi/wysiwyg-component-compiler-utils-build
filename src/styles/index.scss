@@ -1,7 +1,9 @@
+@import './var.scss';
+
 body {
-  font-size: 12px;
+  font-size: $font-size-normal;
 
   .xb-test {
-    color: red;
+    color: $red;
   }
 }
