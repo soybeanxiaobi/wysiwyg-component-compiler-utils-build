@@ -10,7 +10,9 @@
     "es"
   ],
   "scripts": {
-    "build": "npx babel src --out-dir lib"
+    "complier": "npx babel cli --out-dir lib/cli && node ./lib/cli/complier/index.js",
+    "build-cli": "npx babel cli --out-dir lib/cli",
+    "build-src": "npx babel src --out-dir lib/src"
   },
   "license": "MIT",
   "peerDependencies": {

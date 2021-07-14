@@ -4,8 +4,8 @@ module.exports = {
       '@babel/preset-env',
       {
         // "targets": {
-          // "esmodules": true
-          // "chrome": 80
+        //   "esmodules": true,
+        //   "chrome": 80
         // },
         // "modules": 'amd'
       }
