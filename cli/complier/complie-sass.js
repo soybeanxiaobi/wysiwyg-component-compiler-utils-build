@@ -1,4 +1,4 @@
-const { writeFileSync } = require('fs');
+const { outputFileSync } = require('fs-extra');
 const { renderSync } = require('sass');
 
 const { replaceExt } = require('./common');
@@ -6,8 +6,8 @@ const { replaceExt } = require('./common');
 function compileSass(filePath) {
   const { css } = renderSync({ file: filePath });
   const newFilePath = replaceExt(filePath, '.css');
-  console.log('newFilePath: ', newFilePath);
-  writeFileSync(newFilePath, css);
+  // 写入新文件 xx.css
+  outputFileSync(newFilePath, css);
 }
 
 module.exports = compileSass;

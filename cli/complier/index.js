@@ -2,6 +2,7 @@ const { readdirSync, copySync, emptyDirSync } = require('fs-extra');
 const path = require('path');
 
 const complieSass = require('./complie-sass');
+const complieJs = require('./complie-js');
 const { isDir } = require('./common');
 
 const ROOT_SRC_PATH = path.join(__dirname, '../../src');
@@ -26,13 +27,18 @@ function complieDir(dirPath) {
      * build scss file
      */
     if (/\.(scss)$/.test(filename)) {
-      console.log('scss filePath: ', filePath);
       complieSass(filePath);
       return;
     }
+
+    /**
+     * build normal js file
+     */
+    if (/\.(js)$/.test(filename)) {
+      complieJs(filePath);
+      return;
+    }
   })
-
-
 }
 
 (() => {
