@@ -1,18 +1,37 @@
 <template>
-  <div>
-    <span>test-11</span>
+  <div class="xiaobe-test-scss">
+    <p class="xiaobe-test-scss-title">{{ title }}</p>
     <span>{{ getLocationUrl() }}</span>
-    <p>xiaobe-test-page-design-build</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "test",
+  name: "xiaobe-test",
   methods: {
     getLocationUrl() {
       return window.location.href;
     },
   },
+  data() {
+    return {
+      title: "xiaobe2米8",
+    };
+  },
 };
 </script>
+<style scoped lang="scss">
+.xiaobe-test-scss {
+  font-size: 12px;
+
+  &-title {
+    color: red;
+  }
+}
+</style>
+
+<style>
+.xiaobe-test-css {
+  font-size: 14px;
+}
+</style>

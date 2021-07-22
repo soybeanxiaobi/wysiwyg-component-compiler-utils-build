@@ -3,6 +3,7 @@ const path = require('path');
 
 const complieSass = require('./complie-sass');
 const complieJs = require('./complie-js');
+const complieVue = require('./compile-vue');
 const { isDir } = require('./common');
 
 const ROOT_SRC_PATH = path.join(__dirname, '../../src');
@@ -12,7 +13,7 @@ const LIB_SRC_PATH = path.join(__dirname, '../../lib/src');
 function complieDir(dirPath) {
   // 读取src目录
   const dirFileList = readdirSync(dirPath) || [];
-  console.log('==== dirFileList: ', dirFileList);
+  // console.log('==== dirFileList: ', dirFileList);
   dirFileList.forEach(filename => {
     // 文件路径
     const filePath = path.join(dirPath, filename);
@@ -38,6 +39,14 @@ function complieDir(dirPath) {
       complieJs(filePath);
       return;
     }
+
+    /**
+    * build vue sfc file
+    */
+    if (/\.(vue)$/.test(filename)) {
+      complieVue(filePath);
+      return;
+    }
   })
 }
 
@@ -46,7 +55,7 @@ function complieDir(dirPath) {
   emptyDirSync(path.join(__dirname, '../../lib'));
   // 先把src目录同等复制到lib 再做操作
   copySync(ROOT_SRC_PATH, LIB_SRC_PATH);
-  console.log('LIB_SRC_PATH: ', LIB_SRC_PATH);
+  // console.log('LIB_SRC_PATH: ', LIB_SRC_PATH);
   complieDir(LIB_SRC_PATH);
 })()
 

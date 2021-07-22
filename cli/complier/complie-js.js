@@ -1,4 +1,3 @@
-
 const { transformSync } = require('@babel/core');
 const { readFileSync, removeSync, outputFileSync } = require('fs-extra');
 
@@ -7,7 +6,8 @@ const { replaceExt } = require('./common');
 function compileJs(filePath) {
   let code = readFileSync(filePath, 'utf-8');
 
-  const result = transformSync(code, { filename: filePath })
+  const result = transformSync(code)
+  // console.log('compileJs result: ', result);
   if (result) {
     const jsFilePath = replaceExt(filePath, '.js');
     removeSync(filePath);

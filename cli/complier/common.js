@@ -17,7 +17,6 @@ function replaceExt(filename = '', ext = '') {
     return filename;
   }
   const newFilename = filename.replace(/\.(.*)/, ext);
-  console.log('==== newFilename: ', newFilename);
   return newFilename;
 }
 
